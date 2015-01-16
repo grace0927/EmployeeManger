@@ -9,10 +9,11 @@
 </head>
 <body>
 <h3> Employee Manage System</h3>
-<form id="auth" action="AuthController" method="post">
+<form id="auth" action="auth" method="post">
 UserName: <input type="text" name="username"><br/>
 Password: <input type="password" name="password"><br/>
 <input type="submit" value="Submit">
 </form>
+<a href="login.jsp"> JQuery View </a>
 </body>
 </html>

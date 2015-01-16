@@ -8,4 +8,16 @@
     <servlet-name>AuthController</servlet-name>
     <servlet-class>com.employeemanager.controller.AuthController</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthController</servlet-name>
+    <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<servlet-class>com.employeemanager.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/loginAuth</url-pattern>
+  </servlet-mapping>
 </web-app>
