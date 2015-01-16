@@ -13,16 +13,16 @@ import com.employeemanager.model.Employee;
 import come.employeemanager.dao.EmployeeDAO;
 
 /**
- * Servlet implementation class LoginController
+ * Servlet implementation class AuthController
  */
-@WebServlet("/LoginController")
-public class LoginController extends HttpServlet {
+@WebServlet("/AuthController")
+public class AuthController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginController() {
+    public AuthController() {
         super();
         // TODO Auto-generated constructor stub
     }

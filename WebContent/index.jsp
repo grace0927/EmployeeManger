@@ -5,10 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Employee Manager System</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 <h3> Employee Manage System</h3>
-<form action="LoginController" method="post">
+<form id="auth" action="AuthController" method="post">
 UserName: <input type="text" name="username"><br/>
 Password: <input type="password" name="password"><br/>
 <input type="submit" value="Submit">
