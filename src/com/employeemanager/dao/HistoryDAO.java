@@ -1,7 +1,7 @@
 /**
  * 
  */
-package come.employeemanager.dao;
+package com.employeemanager.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

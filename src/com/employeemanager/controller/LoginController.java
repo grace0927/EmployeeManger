@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.employeemanager.dao.EmployeeDAO;
 import com.employeemanager.model.Employee;
-import come.employeemanager.dao.EmployeeDAO;
 
 /**
  * Servlet implementation class LoginController
