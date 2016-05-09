@@ -6,6 +6,7 @@ package com.employeemanager.dao;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.ws.rs.QueryParam;
 
 import com.employeemanager.db.ConnectionFactory;
 import com.employeemanager.db.DBUtil;
@@ -50,7 +51,7 @@ public class EmployeeDAO {
 		return employees;
 	}
 	
-	public Employee findByUsername(String username) {
+	public Employee findByUsername(@QueryParam("username") String username) {
 		Employee employee = new Employee();
 		employee.setUsername(username);
 		String query = "SELECT * FROM employee WHERE username = '" + username + "'";
