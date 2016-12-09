@@ -58,9 +58,8 @@ public class HistoryDAO {
 		return historySet;
 	}
 	
-	public boolean addEmployeeLogin(Employee employee, String login) {
-		String query = "INSERT INTO history SET employee_id = " + employee.getId() + ", login_time = '"
-				+ login + "'";
+	public boolean addEmployeeLogin(Employee employee) {
+		String query = "INSERT INTO history SET employee_id = " + employee.getId() + ", login_time = NOW(), online = 'Y'";
 		
 		try {
 			connection = ConnectionFactory.getConnection();
@@ -76,8 +75,8 @@ public class HistoryDAO {
 		return true;
 	}
 	
-	public boolean updateEmployeeLogout(Employee employee, String logout) {
-		String query = "UPDATE history SET logout_time = '" + logout + "', "
+	public boolean updateEmployeeLogout(Employee employee) {
+		String query = "UPDATE history SET logout_time = NOW(), "
 				+ "online = 'N' WHERE employee_id = " + employee.getId() + "AND online = 'Y'";
 		
 		try {

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.employeemanager.dao.EmployeeDAO;
+import com.employeemanager.dao.HistoryDAO;
 import com.employeemanager.model.Employee;
 
 /**
@@ -44,6 +45,8 @@ public class LoginController extends HttpServlet {
 		Employee employee = dao.findByUsername(username);
 		
 		if(employee.getPassword().equals(password)) {
+			HistoryDAO history = new HistoryDAO();
+			history.addEmployeeLogin(employee);
 			request.setAttribute("employee", employee);
 			response.setContentType("text/html");
 			String html = "First Name: " + employee.getFirstName() + "<br> Last Name: " + employee.getLastName()
